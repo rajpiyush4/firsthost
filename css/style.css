@@ -141,14 +141,16 @@ nav ul li:hover {
     /* #about-page-wrapper{
         flex-direction: column;
     } */
-    #homebox{
-        background: url("/png/undraw_Reading_time_re_phf7\ \(1\)\.png") center no-repeat;
-    background-size: cover;
+        #homebox{
+        background: url("/minorpro2.0/png/undraw_Reading_time_re_phf7\ \(1\)\.png") center no-repeat;
+    background-size: 700px 500px;
+    background-position-x: 0px;
     /* transform: rotateY(-180deg); */
     }
     #homesvg{
         display: none;
     }
+ 
     #circle2{
         display: none;
     }
