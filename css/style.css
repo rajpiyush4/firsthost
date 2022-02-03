@@ -142,7 +142,7 @@ nav ul li:hover {
         flex-direction: column;
     } */
     #homebox{
-        background: url("/minorpro2.0/png/undraw_Reading_time_re_phf7\ \(1\)\.png") center no-repeat;
+        background: url("/png/undraw_Reading_time_re_phf7\ \(1\)\.png") center no-repeat;
     background-size: cover;
     /* transform: rotateY(-180deg); */
     }
@@ -462,7 +462,7 @@ nav ul li:hover {
 
     width: 50%;
     height: 35rem;
-    background: url("/minorpro2.0/png/undraw_Reading_time_re_phf7\ \(1\)\.png") center no-repeat;
+    background: url("/png/undraw_Reading_time_re_phf7\ \(1\)\.png") center no-repeat;
     background-size: cover;
     transform: rotateY(-180deg);
     z-index: 3;
@@ -541,17 +541,17 @@ nav ul li:hover {
 }
 
 #twitter {
-    background-image: url('/minorpro2.0/png/twitter.png');
+    background-image: url('/png/twitter.png');
     background-size: cover;
 }
 
 #github {
-    background-image: url('/minorpro2.0/png/github.png');
+    background-image: url('/png/github.png');
     background-size: cover;
 }
 
 #mail {
-    background-image: url('/minorpro2.0/png/mail.png');
+    background-image: url('/png/mail.png');
     background-size: cover;
 }
 
