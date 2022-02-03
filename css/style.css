@@ -51,7 +51,7 @@ html, body {
     position: fixed;
     z-index: 999;
     width: 100vw;
-    font-family: 'Open Sans', sans-serif;
+
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -138,15 +138,21 @@ nav ul li:hover {
         display: none;
 
     }
-
-    .center {
+    /* #about-page-wrapper{
         flex-direction: column;
+    } */
+    #homebox{
+        background: url("/minorpro2.0/png/undraw_Reading_time_re_phf7\ \(1\)\.png") center no-repeat;
+    background-size: cover;
+    /* transform: rotateY(-180deg); */
     }
-
-    #homebox {
-        height: 4rem;
+    #homesvg{
+        display: none;
     }
-
+    #circle2{
+        display: none;
+    }
+    
 }
 
 @media screen and (max-width: 300px) {
@@ -187,6 +193,10 @@ nav ul li:hover {
         scroll-behavior: smooth;
         display: none;
     }
+
+    #homesvg {
+        display: none;
+    }
 }
 
 .main-page {
@@ -197,6 +207,7 @@ nav ul li:hover {
     position: relative;
     top: var(--navHeight);
     transition: 1s;
+
 }
 
 .slide {
@@ -259,35 +270,27 @@ nav ul li:hover {
 #about-page-wrapper {
     display: flex;
     justify-content: center;
-    height:calc(99vh - var(--navHeight));
-
+    height: calc(99vh - var(--navHeight));
+    /* background-image: url('/minorpro2.0/png/undraw_Dreamer_re_9tua.png');
+    background-size: cover; */
 }
 
 .about-grid-item1 {
     width: 50vw;
-    font-family: 'Open Sans', sans-serif;
-    /* font-weight: 600;
-    font-size: 1.5rem; */
+
+
     padding-left: 10px;
-    /* text-align: center; */
+
     margin-top: 30px;
     padding-top: 30px;
-    /* border: 2px solid black; */
-    /* overflow-x:hidden; */
+
     overflow-y: scroll;
     scroll-behavior: smooth;
-    box-shadow: var(--radval);
+    /* box-shadow: var(--radval); */
+
 
 }
 
-/* .localpic {
-    margin-top: 120px;
-    height: 40%;
-    background-image: url('/minorpro2.0/png/ahnaf-piash-4c3meuz-DUU-unsplash.jpg');
-    background-size: cover;
-    background-blend-mode: overlay;
-    background-color: hsl(59, 40%, 45%);
-} */
 
 #inputs {
     display: flex;
@@ -302,7 +305,7 @@ nav ul li:hover {
     min-width: 300px;
     /* border: 1px solid #000000; */
     padding: 30px 0px 30px 0px;
-    box-shadow: var(--radval);
+    /* box-shadow: var(--radval); */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -314,7 +317,7 @@ nav ul li:hover {
 .input {
     background-color: whitesmoke;
     width: 70%;
-    font-family: 'Open Sans', sans-serif;
+
     text-transform: capitalize;
     letter-spacing: 2px;
     height: 30px;
@@ -336,7 +339,7 @@ nav ul li:hover {
 
 #btn-add {
     /* width: fit-content;
-     */
+    */
     background: white;
     /* color: #333; */
     /* border: 1px solid black; */
@@ -366,7 +369,7 @@ nav ul li:hover {
 
 .name-list {
 
-    font-family: 'Open Sans', sans-serif;
+
     text-transform: capitalize;
     border-left: rgb(230, 170, 81) 10px solid;
     border-radius: 5px;
@@ -380,10 +383,11 @@ nav ul li:hover {
 
 }
 
-#name-list{
+#name-list {
     margin: auto;
     width: 80%;
 }
+
 .contain-list {
     width: 100%;
     transition: 0.6s;
@@ -413,51 +417,31 @@ nav ul li:hover {
 
 .about-grid-item2 {
     width: 50vw;
-    font-family: 'Open Sans', sans-serif;
-    font-size: 1.5rem;
-    /* border: 2px solid black; */
-    margin-top: 50px;
-    box-shadow: var(--radval);
-    display: none;
+    padding-left: 10px;
+    margin-top: 30px;
+    padding-top: 30px;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+    border-left: black 1px solid;
+    /* box-shadow: var(--radval); */
+    /* transform: rotateY(-180deg); */
 
 }
 
-/* 
-.pg-list {
-    
-    margin-left: 40px;
-    
-    height: 2.7rem;
-    border-bottom: solid 2px rgb(36, 33, 33);
-    transition: 0.5s linear ease-out;
-    overflow: hidden;
-    transition: 0.5s;
-    user-select: none;
+#pg-intro {
+    margin: auto;
+    width: 50%;
+    letter-spacing: 2px;
+    line-height: 30px;
 }
 
-.up {
-
-    transition: 0.4s 0.5s linear;
-    
+#pg-intro p span {
+    font-size: 30px;
+    font-weight: bold;
+    margin-right: 5px;
 }
 
-.up span {
-    font-size: 16px;
-}
 
-.pg-list:hover .up {
-    transform: translateY(calc(-4rem));
-
-}
-
-.pg-list:hover {
-    text-decoration: line-through;
-
-}
-
-.space {
-    margin-top: 40px;
-} */
 
 .center {
     display: flex;
@@ -465,19 +449,20 @@ nav ul li:hover {
     height: 120vh;
     width: 100vw;
     background-color: white;
+
 }
 
 #homebox {
 
-    width: 50vw;
+    width: 50%;
     height: 35rem;
 }
 
 #homesvg {
 
-    width: 50vw;
+    width: 50%;
     height: 35rem;
-    background: url("/png/undraw_Reading_time_re_phf7\ \(1\).png") center no-repeat;
+    background: url("/minorpro2.0/png/undraw_Reading_time_re_phf7\ \(1\)\.png") center no-repeat;
     background-size: cover;
     transform: rotateY(-180deg);
     z-index: 3;
@@ -510,13 +495,30 @@ nav ul li:hover {
 
 #quotes {
     background: rgb(255, 255, 255);
-    width: 20em;
-    height: 170px;
+    width: clamp(14em, 30vw, 20em);
+    height: 200px;
     position: absolute;
     top: 11rem;
     left: 10%;
     z-index: 2;
+    border-radius: 30%;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: space-around;
 
+}
+
+#quotes p span {
+    font-size: 30px;
+    font-weight: bold;
+    margin-right: 5px;
+}
+
+.quotes-link {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 }
 
 .cutter {
@@ -530,9 +532,31 @@ nav ul li:hover {
     margin-top: 20px;
 }
 
+.link-png {
+    /* border-radius: 50%; */
+    position: relative;
+    width: 40px;
+    height: 40px;
+
+}
+
+#twitter {
+    background-image: url('/minorpro2.0/png/twitter.png');
+    background-size: cover;
+}
+
+#github {
+    background-image: url('/minorpro2.0/png/github.png');
+    background-size: cover;
+}
+
+#mail {
+    background-image: url('/minorpro2.0/png/mail.png');
+    background-size: cover;
+}
+
 .clipcircle {
     background-color: rgb(240, 240, 44);
-    /* clip-path: ellipse(130px 140px at 20% 30%); */
     clip-path: circle(at 40%);
     transition: 1.2s;
     opacity: 0.87;
@@ -573,4 +597,10 @@ nav ul li:hover {
         transform: translate(30px, -3px) scale(1);
     }
 
+}
+
+.popup {}
+
+@keyframes popup-slide {
+    0% {}
 }
