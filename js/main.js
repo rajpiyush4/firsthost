@@ -14,8 +14,9 @@ window.onload = () => {
     var pageWrap = $("#page-wrapper")
     var place = $All(".place")
     var slide = $All(".slide");
-    var colorArr = ['black', 'whitesmoke', '#ae4f2f', '#507844'];
-    
+
+    var colorArr = ['black', 'whitesmoke', '#ae4f2f', '#525252'];
+//#141414 #4a4a4a
 
 
 
@@ -88,30 +89,78 @@ window.onload = () => {
         </div>`
 
             nameInput.value = ""
-            addInput.value = ""
-        }
-        else {
-            alert("Please fill the given first then click on the button")
-        }
+            addInput.value = "";
+            update();
+
+            
         var cL = $All('.contain-list')[newList];
 
-        cL.style='transition:1s; opacity:0; transform:translateY(-50px);'
-        nameList.parentElement.scrollTop=nameList.parentElement.scrollHeight;
+        cL.style = 'transition:1s; opacity:0; transform:translateY(-50px);'
+        nameList.parentElement.scrollTop = nameList.parentElement.scrollHeight;
         // console.log(nameList.parentElement);
         setTimeout(function () {
             cL.style = 'transition:1s; opacity:1; transform:translateY(0px);';
-        },50);
+        }, 50);
 
-
+        }
+        else {
+            // alert("Please fill the given first then click on the button")
+            popup('Please Fill the given first then click on the button',5,400,80)
+        }
 
 
 
     })
 
+    //open comments
+    function update() {
+        var commentIcon = $All(".comment-png");
+        var commentPage = $('#comment-page');
+        for (let i = 0; i < commentIcon.length; i++) {
+            commentIcon[i].onclick = () => {
+                commentPage.style = 'animation:open-comment 1s 1 forwards;';
 
+                $All('.about-grid-item1')[0].style='transform:translateX(-25vw)';
+        
+            }
 
+        }
+    }
 
+// popup('this',30);
+    function popup(content, interval,w,h) {
+        let elem = document.createElement('div');
+        // elem.class = 'popup';
+        document.body.appendChild(elem);
+        elem.innerHTML = content;
+        // elem.style.zIndex = '999';
+        elem.style=`position:absolute;z-index:9999; bottom:60px; right:-${w+3}px;width:${w}px;height:${h}px;background-color:#223;color:#eee;animation:popup-slide ${interval}s 1; border-radius:2px; display:flex;justify-content:center;align-items:center;`; 
+        // console.log(elem);
+        setTimeout(function(){
+            elem.style='diplay:none;'
+            elem.remove();
+        },interval*1000);
 
+    }
+    
+
+     //us page animations
+     var iconBox=$All(".us-icons")
+     var usIcon=$All(".us-icon-box")
+     var usBox1=$("#us-box1")
+     var usBox2=$("#us-box2")
+     for (let i = 0; i < iconBox.length; i++) {
+        iconBox[i].onmouseover=()=>{
+                   usIcon[i].style="transform:scale(1.5)"
+                   
+
+                   setTimeout(() => {
+                       usIcon[i].style="transform:scale(1)"
+                   }, 500);
+        }
+         
+     }
+    
 
 
 
