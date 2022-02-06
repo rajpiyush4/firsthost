@@ -30,14 +30,17 @@ window.onload = () => {
         mainPage.style = `background-color:${color}`;
         pageWrap.style = `background-color:${color}`;
 
-        if (elem == slide[1]) {
+        if (elem === slide[1]) {
+            nav.style="color:black;"
             setAnim(2, 3);
             // console.log(2)
         }
-        if (elem == slide[2]) {
+        if (elem === slide[2]) {
+            nav.style="color:black;"
             setAnim(1, 3)
         }
-        if (elem == slide[3]) {
+        if (elem === slide[3]) {
+            nav.style="color:whitesmoke;"
             setAnim(2, 1)
         }
     }
@@ -65,6 +68,7 @@ window.onload = () => {
     navlist[0].onclick = function () {
         mainPage.style = `background-color:white;`;
         pageWrap.style = `background-color:white;`;
+        nav.style="color:black;" 
         slide[lastPage].style = "animation:closepage 1s 1 forwards;";
         navlist[0].style = 'transform:scale(1.08);border-bottom:1px solid black;border-radius:3px;';
         navlist[lastPage].style = 'transform:scale(0.9); border-bottom:none;';
@@ -84,7 +88,7 @@ window.onload = () => {
             // var creatediv=document.createElement("div")
             newList += 1;
             nameList.innerHTML += `<div class="contain-list"> 
-        <div class='name-list'> ${nameInput.value}<span class='address-list'> (${addInput.value}) </span> <img class='comment-png' src="/png/review.png"  alt=""></div>
+        <div class='name-list'><span> ${nameInput.value}<span class='address-list'> (${addInput.value}) </span></span> <img class='comment-png' src="/png/comment.png"  alt=""></div>
         
         </div>`
 
@@ -105,7 +109,7 @@ window.onload = () => {
         }
         else {
             // alert("Please fill the given first then click on the button")
-            popup('Please Fill the given first then click on the button',5,400,80)
+            popup('Please Fill the given first then click on the button',5,400,65)
         }
 
 
@@ -160,7 +164,6 @@ window.onload = () => {
         }
          
      }
-    
 
 
 
