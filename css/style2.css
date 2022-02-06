@@ -1,0 +1,200 @@
+
+@media screen and (max-width: 650px) {
+    .nav {
+        height: var(--navHeight);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+
+    }
+
+    :root {
+        --navHeight: 7rem;
+    }
+
+    .heading {
+        margin: 0;
+        font-size: 2em;
+        font-weight: 200;
+    }
+
+    nav ul {
+        width: 80vw;
+        display: flex;
+        justify-content: space-between;
+
+
+    }
+
+    nav ul li {
+        margin: 0;
+    }
+
+    html {
+        width: 100vw;
+        height: auto;
+        overflow-x: hidden;
+        scroll-behavior: smooth;
+        display: none;
+
+    }
+
+    /* #about-page-wrapper{
+        flex-direction: column;
+    } */
+    #homebox {
+        background: url("/minorpro2.0/png/undraw_Reading_time_re_phf7\ \(1\)\.png") center no-repeat;
+        background-size: 700px 500px;
+        background-position-x: 0px;
+        /* transform: rotateY(-180deg); */
+    }
+
+    #homesvg {
+        display: none;
+    }
+
+    #circle2 {
+        display: none;
+    }
+    .about-grid-item1{
+        width: 100vw;
+    }
+
+}
+
+@media screen and (max-width: 300px) {
+    nav {
+        height: 10rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .heading {
+        margin: 0;
+        font-size: 1.5em;
+
+    }
+
+    .nav-list {
+        width: 1rem;
+    }
+
+    nav ul {
+        width: 90vw;
+        display: flex;
+        justify-content: space-around;
+
+
+    }
+
+    nav ul li {
+        margin: 0;
+    }
+
+    html {
+        width: 100vw;
+        height: auto;
+        overflow-x: hidden;
+        scroll-behavior: smooth;
+        display: none;
+    }
+
+    #homesvg {
+        display: none;
+    }
+}
+@keyframes slidepage {
+    0% {
+        transform: translate(100vw);
+        opacity: 0;
+    }
+
+    30% {
+        opacity: 0.6;
+    }
+
+    95% {
+        transform: translate(-8px);
+    }
+
+    100% {
+        transform: translate(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes closepage {
+    0% {
+        transform: translate(0px, 0px);
+        opacity: 1;
+    }
+
+    60% {
+        opacity: 0.7;
+    }
+
+    100% {
+        transform: translate(-100vw, 0px);
+        opacity: 0;
+    }
+}
+
+@keyframes circle {
+    20% {
+        transform: translate(-15px, -30px) scale(1.04);
+    }
+
+    56% {
+        transform: translate(-3px, -17px) scale(1.1);
+    }
+
+    75% {
+        transform: translate(30px, -3px) scale(1);
+    }
+
+}
+
+@keyframes popup-slide {
+    0% {
+        left: 100%;
+        transform: translateX(0px);
+    }
+
+    20% {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    80% {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    100% {
+        left: 100%;
+        transform: 0px;
+    }
+}
+
+@keyframes open-comment {
+    0% {
+        transform: translate(100vw);
+        opacity: 0;
+    }
+
+    30% {
+        opacity: 0.6;
+    }
+
+    95% {
+        transform: translate(50.2vw);
+    }
+
+    100% {
+        transform: translate(50vw);
+        opacity: 1;
+    }
+}
