@@ -64,15 +64,16 @@ html, body {
     justify-content: space-between;
     align-items: center;
     transition: 300ms ease-in-out;
-    color: #14213d;
+    color: whitesmoke;
     backdrop-filter: blur(3px);
+    
 
 }
 
 nav h1 {
     margin-left: 1em;
     font-size: 5vmin;
-
+    font-family: serif;
 }
 
 nav ul {
@@ -91,30 +92,9 @@ nav ul li {
     font-size: 14px;
     font-weight: bold;
     /* overflow: hidden; */
+    font-family: serif;
     padding-bottom: 3px;
 }
-.nav-list::before{
-    content: "";
-    position:absolute;
-    width: 4.3%;
-    height: 2px;
-    /* background: #0c0a0f; */
-    bottom: 28.4px;
-    opacity: 1;
-    transform: translateX(50vw);
-    transition: 0.5s;
-}
-.nav-list:hover::before,.nav-list:focus:before{
-    opacity: 1;
-    transform: translateX(-12%);
-}
-.rest::before{
-    width: 7%;
-}
-.place::before{
-    width: 2%;
-}
-/*  */
 
 .restaurant, .hostel, .homepage, .location {
     width: 2rem;
@@ -150,11 +130,12 @@ nav ul li:hover {
 
 
 .main-page {
-    background-color: #fca311;
+    background-color: #373034;
     transition: 0.7s;
 }
 
 .main-page-wrapper {
+    background-color: #373034;
     position: relative;
     top: var(--navHeight);
     transition: 1s;
@@ -212,9 +193,7 @@ nav ul li:hover {
 #hostel-input-parent {
     width: 80%;
     min-width: 300px;
-    /* border: 1px solid #000000; */
     padding: 30px 0px 30px 0px;
-    /* box-shadow: var(--radval); */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -333,9 +312,6 @@ nav ul li:hover {
     overflow-y: scroll;
     scroll-behavior: smooth;
     border-left: 2px #ccc solid;
-    /* background-color:rgb(32, 30, 30); */
-    /* box-shadow: var(--radval); */
-    /* transform: rotateY(-180deg); */
     backdrop-filter: blur(6px);
     opacity: 0;
     transform: translate(100vw);
@@ -423,55 +399,11 @@ nav ul li:hover {
 }
 #center-wrapper{
     width: 100%;
-    height: 75%;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    overflow-y: scroll;
+    height: 70%;
+    background-image: url("/png/starwars.svg");
+    background-size: cover;
 
 }
-
-.center-item{
-    /* transform: translateY(10%); */
-    width: 32%;
-    height: 80%;
-    backdrop-filter: brightness(95%) blur(1px);
-    border-radius: 5px;
-    transition: 0.3s;
-    background-blend-mode: overlay;
-    background-color: #fca311;
-    font-size: 1vw;
-    text-transform: uppercase;
-    font-weight:300;
-    color: wheat;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    font-family: serif;
-    
-}
-
-#center-item1{
-
-}
-#center-item2{
-
-    
-}
-#center-item3{
-    
-    
-}
-
-.center-item:hover{
-    width: 35%;
-    height: 95%;
-    background-color: #14213d;
-}
-
-
-
 .clipcircle {
 
     clip-path: circle(at 40%);
@@ -627,7 +559,6 @@ nav ul li:hover {
     background: url("/png/rest.jpg");
     /* background-attachment: fixed; */
     background-size: cover;
-
     background-position-y: -60px;
     width: 100%;
     height: 100vh;
@@ -638,31 +569,7 @@ nav ul li:hover {
 
 }
 
-#rest-info {
-    position: relative;
-    top: 15%;
-    border-radius: 5%;
-    height: 90%;
-    background-color: #c4d3daa2;
-    overflow-y: scroll;
-    display: flex;
-}
 
-#rest-info-item1 {
-    width: 50%;
-    font-size: 40px;
-    font-weight: 200;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color: rgb(32, 26, 26);
-}
-
-#rest-info-item2 {
-    width: 50%;
-    font-size: 40px;
-    font-weight: 200;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color: rgb(0, 0, 0);
-}
 
 #rest-page-wrapper>div:first-child {
     /* background-color: burlywood; */
