@@ -11,6 +11,11 @@
     box-sizing: border-box;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+::selection{
+    background-color: rgb(51, 221, 65);
+    opacity: 0.8;
+    color: #eee;
+}
 
 html, body {
     width: 100vw;
@@ -47,8 +52,6 @@ html, body {
 
 ::-webkit-scrollbar {
     display: none;
-
-
 }
 
 .nav {
@@ -57,13 +60,11 @@ html, body {
     position: fixed;
     z-index: 999;
     width: 100vw;
-
     display: flex;
     justify-content: space-between;
     align-items: center;
     transition: 300ms ease-in-out;
-    color: #3f3d56;
-    /* border-bottom: 1px rgb(31, 26, 26) solid; */
+    color: #14213d;
     backdrop-filter: blur(3px);
 
 }
@@ -81,7 +82,7 @@ nav ul {
     display: flex;
     align-items: center;
     font-size: 1.3rem;
-
+    /* overflow: hidden; */
 }
 
 nav ul li {
@@ -89,7 +90,31 @@ nav ul li {
     user-select: none;
     font-size: 14px;
     font-weight: bold;
+    /* overflow: hidden; */
+    padding-bottom: 3px;
 }
+.nav-list::before{
+    content: "";
+    position:absolute;
+    width: 4.3%;
+    height: 2px;
+    /* background: #0c0a0f; */
+    bottom: 28.4px;
+    opacity: 1;
+    transform: translateX(50vw);
+    transition: 0.5s;
+}
+.nav-list:hover::before,.nav-list:focus:before{
+    opacity: 1;
+    transform: translateX(-12%);
+}
+.rest::before{
+    width: 7%;
+}
+.place::before{
+    width: 2%;
+}
+/*  */
 
 .restaurant, .hostel, .homepage, .location {
     width: 2rem;
@@ -113,7 +138,7 @@ nav ul li:hover {
     height: 40px;
     left: 95%;
     top: 15%;
-    background-image: url("/png/login\ \(1\).png");
+    background-image: url("/minorpro2.0/png/login\ \(1\).png");
     background-size: cover;
     z-index: 999;
     transition: 0.5s;
@@ -125,6 +150,7 @@ nav ul li:hover {
 
 
 .main-page {
+    background-color: #fca311;
     transition: 0.7s;
 }
 
@@ -143,6 +169,8 @@ nav ul li:hover {
     opacity: 0;
     transition: 1.2s;
     z-index: 100;
+    /* border: 1px solid #ccc;
+    border-radius: 20px; */
 }
 
 #about-page {}
@@ -151,7 +179,7 @@ nav ul li:hover {
     /* display: flex;
     justify-content: center; */
     height: calc(99vh - var(--navHeight));
-    background-image: url('/png/undraw_Dreamer_re_9tua.png');
+    background-image: url('/minorpro2.0/png/undraw_Dreamer_re_9tua.png');
     background-size: cover;
     width: 100vw;
 }
@@ -168,6 +196,7 @@ nav ul li:hover {
     margin: auto;
     transition: 1s;
     height: 96%;
+    
 }
 
 
@@ -381,131 +410,70 @@ nav ul li:hover {
     height: 40px;
     margin-right: 5px;
     border-radius: 50%;
-    /* background-color: #eee; */
-
-    /* background-image: url('/minorpro2.0/png/user.png'); */
     background-size: cover;
     /* transform: translateY(-60px); */
 }
 
 .center {
-    display: flex;
-    /* justify-content: center; */
+   
     z-index: 100;
     height: 120vh;
     width: 100vw;
-    background-color: white;
+    
+}
+#center-wrapper{
+    width: 100%;
+    height: 75%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    overflow-y: scroll;
 
 }
 
-#homebox {
-
-    width: clamp(100px, 100vw, 600px);
-    height: 35rem;
-}
-
-#homesvg {
-
-    /* float: left; */
-    width: 55%;
-    height: 35rem;
-    background: url("/png/undraw_Reading_time_re_phf7\ \(1\)\.png") center no-repeat;
-    background-size: cover;
-    z-index: 3;
-
-}
-
-#homebox::before {
-    content: "";
-    position: absolute;
-    left: 150px;
-    top: 13px;
-    height: 35rem;
-    width: 2px;
-    border-radius: 2px;
-    background-color: rgb(60, 60, 50);
-    z-index: 1;
-}
-
-#homebox::after {
-    content: "";
-    position: absolute;
-    left: 60px;
-    top: 40px;
-    width: 100vw;
-    height: 2px;
-    border-radius: 2px;
-    background-color: rgb(60, 60, 50);
-    z-index: 99;
-}
-
-#quotes {
-
-
-    background-color: rgba(255, 255, 255);
-    width: clamp(14em, 50vw, 20em);
-    height: 200px;
-    position: absolute;
-    top: 11rem;
-    left: 7%;
-    z-index: 10;
-    /* border-radius: 30%; */
+.center-item{
+    /* transform: translateY(10%); */
+    width: 32%;
+    height: 80%;
+    backdrop-filter: brightness(95%) blur(1px);
+    border-radius: 5px;
+    transition: 0.3s;
+    background-blend-mode: overlay;
+    background-color: #fca311;
+    font-size: 1vw;
+    text-transform: uppercase;
+    font-weight:300;
+    color: wheat;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-
+    font-family: serif;
+    
 }
 
-#quotes p {
-    word-spacing: 2px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+#center-item1{
+  background-image: url("/minorpro2.0/png/typewriter.jpg");
+  background-size: cover;
 }
-
-#quotes p span {
-    word-spacing: 2px;
-    color: rgb(117, 94, 19);
-    font-size: 40px;
-    font-weight: 200;
-    margin-right: 5px;
-}
-
-.quotes-link {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-}
-
-.cutter {
-    background: rgb(255, 255, 255);
-    width: 20em;
-    height: 20px;
-    position: relative;
-    top: 28rem;
-    left: 10%;
-    z-index: 2;
-    margin-top: 20px;
-}
-
-.link-png {
-    /* border-radius: 50%; */
-    /* position: relative; */
-    width: 40px;
-    height: 40px;
-    transform: scaleX(3) translateX(-35px);
-
-}
-
-
-#github {
-    background-image: url('/png/github.png');
+#center-item2{
+    background-image: url("/minorpro2.0/png/tv.jpg");
     background-size: cover;
+    
+}
+#center-item3{
+    background-image: url("/minorpro2.0/png/cassette.jpg");
+    background-size: cover;
+    
 }
 
-#mail {
-    background-image: url('/png/mail.png');
-    background-size: cover;
+.center-item:hover{
+    width: 35%;
+    height: 95%;
+    background-color: #14213d;
 }
+
+
 
 .clipcircle {
 
@@ -624,18 +592,18 @@ nav ul li:hover {
 }
 
 .linkedin {
-    background-image: url("/png/linkedin.svg");
+    background-image: url("/minorpro2.0/png/linkedin.svg");
     background-size: cover;
 
 }
 
 .insta {
-    background-image: url("/png/instagram.svg");
+    background-image: url("/minorpro2.0/png/instagram.svg");
     background-size: cover;
 }
 
 .gmail {
-    background-image: url("/png/envelope.svg");
+    background-image: url("/minorpro2.0/png/envelope.svg");
     background-size: cover;
 }
 
@@ -648,21 +616,6 @@ nav ul li:hover {
     align-items: center;
     /* background-color: #141414; */
 }
-
-/* #us-box2::before {
-    position: absolute;
-    content: "SUMIT SO";
-    display: block;
-    right: 10%;
-    top: 30%;
-    word-spacing: 2px;
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color: rgb(215, 213, 218);
-    font-weight: 500;
-    padding: 10px;
-    border-right: rgb(215, 213, 218) solid 3px;
-    
-} */
 .col-change {
     background-color: #4a4a4a;
 }
@@ -674,7 +627,7 @@ nav ul li:hover {
 }
 
 #rest-page-wrapper {
-    background: url("/png/rest.jpg");
+    background: url("/minorpro2.0/png/rest.jpg");
     /* background-attachment: fixed; */
     background-size: cover;
 
@@ -789,16 +742,16 @@ nav ul li:hover {
     background-color: #726559;
     height: 0%;
     z-index: -9;
-    border-radius: 50% 50% 0 0;
+    border-radius: 0% 0% 0 0;
     transition: 0.71s;
 }
 
-#rest-nav button:hover {
+#rest-nav button:hover  {
     color: #ddd;
 }
 
 #rest-nav button:hover:before {
-    height: 220%;
+    height: 120%;
 }
 
 #list-line {
@@ -820,12 +773,31 @@ nav ul li:hover {
     background-color: #c8b36b;
     border-radius: 10% 10% 0 0;
     transition: ease-in-out;
-    display: flex;
-    align-items: center;
+   
 
 }
-
-#rest-page-wrapper>div:nth-child(3)>div {
+#slideup::before{
+    content: "";
+    width:15rem;
+    height: 40%;
+    border-radius: 50%;
+    background-color:#c8b36b;
+    z-index: -1;
+    position: absolute;
+    top: -10%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+#slideup-wrapper{
+    width: 100%;
+    height: 90%;
+    display: flex; 
+    align-items: center;
+    opacity: 0;
+    transition: 1s 0.8s ease-in-out;
+    transform: translateY(30px);
+}
+#slideup-item1{
     width: 50%;
     height: 90%;
 }
@@ -842,34 +814,55 @@ nav ul li:hover {
 #arrowdown {
     width: 50px;
     height: 50px;
-    background-image: url("/png/arrowdown.svg");
+    background-image: url("/minorpro2.0/png/arrowdown.svg");
     background-size: cover;
     margin: auto;
 }
 #slideup-item2{
+    width: 50%;
+    height: 90%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
 }
 #slideup-item2 input{
     width: 60%;
     text-transform: capitalize;
     letter-spacing: 2px;
-    height: 20%;
+    height: 18%;
     border-radius: 10px;
     background-color: #af9c5b;
     font-size: 1.5rem;
     font-family: serif;
-    padding: 10px;
-    margin-bottom: 20px;
+    padding: 10px 20px;
+    margin-bottom: 26px;
     border: none;
     outline: none;
 }
+#slideup-item2 span{
+    font-size: 23px;
+    margin:1px 10px;
+    letter-spacing: 0.4px;
+}
+#rest-submit{
+    display: flex;
+    /* width: 35%; */
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 4px 6px;
+    transition: 0.3s;
+    border-radius:6px;
+}
+#rest-submit:hover{
+    background-color: rgba(30,30,30,0.1);
+}
+
 #arrowleft{
-    width: 60px;
-    height: 60px;
-    background-image: url("/png/arrowleft.svg");
+    width: 30px;
+    height: 30px;
+    background-image: url("/minorpro2.0/png/arrowleft.svg");
     background-size: cover;
     font-size: 10px;
     font-family: serif;
