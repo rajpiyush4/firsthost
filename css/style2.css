@@ -68,26 +68,6 @@
         display: none;
     }
 
-    /* #center-wrapper {
-        height: auto;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        overflow-y: scroll;
-      
-      }
-  
-      .center-item{
-  
-          width: 80%;
-          height: 500px;
-          margin: 20px;
-      }
-  
-      .center-item:hover{
-          width: 80%;
-          height: 550px;
-      } */
 }
 
 @media screen and (max-width: 300px) {
@@ -141,12 +121,12 @@
     }
 
     40% {
-        opacity: 0.6;
+        opacity: 0.9;
         transform: scale(0.38, 0.41);
     }
 
     45% {
-        opacity: 0.64;
+        opacity: 0.9;
         transform: scale(0.42, 0.42);
     }
 
