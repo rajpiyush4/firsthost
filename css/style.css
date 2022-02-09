@@ -138,7 +138,7 @@ nav ul li:hover {
     height: 40px;
     left: 95%;
     top: 15%;
-    background-image: url("/minorpro2.0/png/login\ \(1\).png");
+    background-image: url("/png/login\ \(1\).png");
     background-size: cover;
     z-index: 999;
     transition: 0.5s;
@@ -179,7 +179,7 @@ nav ul li:hover {
     /* display: flex;
     justify-content: center; */
     height: calc(99vh - var(--navHeight));
-    background-image: url('/minorpro2.0/png/undraw_Dreamer_re_9tua.png');
+    background-image: url('/png/undraw_Dreamer_re_9tua.png');
     background-size: cover;
     width: 100vw;
 }
@@ -453,17 +453,14 @@ nav ul li:hover {
 }
 
 #center-item1{
-  background-image: url("/minorpro2.0/png/typewriter.jpg");
-  background-size: cover;
+
 }
 #center-item2{
-    background-image: url("/minorpro2.0/png/tv.jpg");
-    background-size: cover;
+
     
 }
 #center-item3{
-    background-image: url("/minorpro2.0/png/cassette.jpg");
-    background-size: cover;
+    
     
 }
 
@@ -592,18 +589,18 @@ nav ul li:hover {
 }
 
 .linkedin {
-    background-image: url("/minorpro2.0/png/linkedin.svg");
+    background-image: url("/png/linkedin.svg");
     background-size: cover;
 
 }
 
 .insta {
-    background-image: url("/minorpro2.0/png/instagram.svg");
+    background-image: url("/png/instagram.svg");
     background-size: cover;
 }
 
 .gmail {
-    background-image: url("/minorpro2.0/png/envelope.svg");
+    background-image: url("/png/envelope.svg");
     background-size: cover;
 }
 
@@ -627,7 +624,7 @@ nav ul li:hover {
 }
 
 #rest-page-wrapper {
-    background: url("/minorpro2.0/png/rest.jpg");
+    background: url("/png/rest.jpg");
     /* background-attachment: fixed; */
     background-size: cover;
 
@@ -814,7 +811,7 @@ nav ul li:hover {
 #arrowdown {
     width: 50px;
     height: 50px;
-    background-image: url("/minorpro2.0/png/arrowdown.svg");
+    background-image: url("/png/arrowdown.svg");
     background-size: cover;
     margin: auto;
 }
@@ -862,7 +859,7 @@ nav ul li:hover {
 #arrowleft{
     width: 30px;
     height: 30px;
-    background-image: url("/minorpro2.0/png/arrowleft.svg");
+    background-image: url("/png/arrowleft.svg");
     background-size: cover;
     font-size: 10px;
     font-family: serif;
