@@ -1,7 +1,5 @@
 window.onload = () => {
-   
 
- 
 
 
     var $ = document.querySelector.bind(document)
@@ -27,22 +25,20 @@ window.onload = () => {
     //page slide animation
     function slidepage(elem, color) {
 
-
-
-        elem.style = `animation: slidepage 0.7s 1 forwards; background-color:${color};`;
+        elem.style = `animation: slidepage 1.8s 1 forwards; background-color:${color};`;
 
         mainPage.style = `background-color:${color}`;
         pageWrap.style = `background-color:${color}`;
 
         if (elem === slide[1]) {
-            nav.style="color: #3f3d56;"
-            $('#circle').style="background-color:#e6e6e6;";
+            nav.style = "color: #3f3d56;"
+            $('#circle').style = "background-color:#e6e6e6;";
             setAnim(2, 3);
             // console.log(2)
         }
         if (elem === slide[2]) {
             nav.style = "color:#373333;";
-            $('#circle').style="background-color:#7c7c7c;"
+            $('#circle').style = "background-color:#7c7c7c;"
             setAnim(1, 3);
         }
         if (elem === slide[3]) {
@@ -52,33 +48,48 @@ window.onload = () => {
     }
 
     function setAnim(e, e2) {
-        slide[e].style = "animation:closepage 1s 1 forwards;"
-        slide[e2].style = "animation:closepage 1s 1 forwards;"
+        slide[e].style = "animation:closepage 0.7s 1 forwards;"
+        slide[e2].style = "animation:closepage 0.7s 1 forwards;"
 
-        navlist[e].style = 'transform:scale(0.9);border-bottom:none;';
-        navlist[e2].style = 'transform:scale(0.9); border-bottom:none;';
-        navlist[0].style = 'transform:scale(0.9); border-bottom:none;';
+        // navlist[e].style = 'border-bottom:none;';
+        // navlist[e2].style = 'border-bottom:none;';
+        $All(".center")[0].style = "transiton:0.7s; filter:brightness(90%) blur(0.1px);";
+        // navlist[0].style = 'border-bottom:none;';
 
     }
 
     var lastPage;
-    for (let i = 1; i < navlist.length; i++) {
-        navlist[i].onclick = () => {
-            slidepage(slide[i], colorArr[i])
-            lastPage = i;
-            navlist[i].style = 'transform:scale(1.08);border-bottom:1px solid black;border-radius:3px;';
+    for (let i = 0; i < navlist.length; i++) {
+        
+        navlist[i].onmouseover = function () {
+            for (let x = 0; x < navlist.length; x++) {
+                navlist[x].style.border = 'none';
+            }
+
+
+            navlist[i].onclick = () => {
+                if (i == 0) {
+                    mainPage.style = `background-color:#fca311;`;
+                    pageWrap.style = `background-color:#fca311;`;
+                    nav.style = "color:#14213d;";
+                    $('#circle').style = "background-color:#f9d726;"
+                    slide[lastPage].style = "animation:closepage 1s 1 forwards;";
+                    lastPage = 0;
+                    $All(".center")[0].style = "transiton:0.7s; filter:brightness(100%) blur(0px);";
+
+
+                }
+                if (i > 0) {
+                    slidepage(slide[i], colorArr[i])
+                    lastPage = i;
+                    navlist[i].style = 'border-bottom:2px solid black;border-radius:1px;';
+                }
+            }
+            navlist[i].onmouseleave = function () {
+                navlist[lastPage].style = 'border-bottom:2px solid #334;border-radius:1px;';
+
+            }
         }
-
-
-    }
-    navlist[0].onclick = function () {
-        mainPage.style = `background-color:white;`;
-        pageWrap.style = `background-color:white;`;
-        nav.style = "color:#3f3d56;";
-        $('#circle').style="background-color:#f9d726;"
-        slide[lastPage].style = "animation:closepage 1s 1 forwards;";
-        navlist[0].style = 'transform:scale(1.08);border-bottom:1px solid black;border-radius:3px;';
-        navlist[lastPage].style = 'transform:scale(0.9); border-bottom:none;';
     }
 
 
@@ -91,7 +102,7 @@ window.onload = () => {
     var newList = -1;
     btnadd.addEventListener("click", () => {
 
-        if (addInput.value != ""  && nameInput.value != "") {
+        if (addInput.value != "" && nameInput.value != "") {
             // var creatediv=document.createElement("div")
             newList += 1;
             nameList.innerHTML += `<div class="contain-list"> 
@@ -116,16 +127,12 @@ window.onload = () => {
         }
         else {
             // alert("Please fill the given first then click on the button")
-            popup('Please Fill the given first then click on the button', 3)
+            popup('Please Fill the given first then click on the button!', 3);
         }
 
 
 
     })
-     
-
-
-
 
 
 
@@ -162,9 +169,9 @@ window.onload = () => {
         document.body.appendChild(elem);
         elem.innerHTML = content;
         // elem.style.zIndex = '999';
-        elem.style = `position:absolute;z-index:9999; bottom:60px; padding:10px 15px;
-        overflow:hidden;
-        background-color:#223;color:#eee;animation:popup-slide ${interval}s 1; border-radius:2px; `;
+        elem.style = `position:fixed;z-index:9999; bottom:60px; padding:10px 15px;
+        overflow:hidden;width:clamp(70px,100vw,380px);
+        background-color:#223;color:#eee;animation:popup-slide ${interval}s 1; border-radius:2px; text-align:center; `;
         // console.log(elem);
         setTimeout(function () {
             elem.style = 'diplay:none;'
@@ -194,25 +201,28 @@ window.onload = () => {
 
 
     //rest page animation
-    var bool=true
-    
-    var slideuppage=$("#slideup")
-    var listingBtn=$("#listing-btn")
-    var restWrapper=$("#rest-page-wrapper")
-    listingBtn.onclick=()=>{
-        if (bool) {
-            slideuppage.style="animation: slideup 1s 1 forwards;"
-        restWrapper.style="filter:brightness(90%)"
+    var bool = true
 
-        bool=false
+    var slideuppage = $("#slideup")
+    var listingBtn = $("#listing-btn")
+    var restWrapper = $("#rest-page-wrapper")
+    var slideupWrapper = $("#slideup-wrapper")
+    listingBtn.onclick = () => {
+        if (bool) {
+            slideuppage.style = "animation: slideup 1s 1 forwards;"
+            restWrapper.style = "filter:brightness(78%);"
+            slideupWrapper.style = "opacity:1; transform: translateY(0px);";
+            bool = false;
         }
-        else{
-            slideuppage.style="animation:slidedown 1s; "
-            restWrapper.style="filter:brightness(60%)"
-    
-            bool=true
+        else {
+            slideupWrapper.style = "transition:ease-out 1s 0.2s;transform: translateY(40px); opacity:0;";
+            setTimeout(function () {
+                restWrapper.style = "transition:0.8s;filter:brightness(60%) ;";
+                slideuppage.style = "animation:slidedown 1.3s 1 forwards;";
+                bool = true;
+            }, 860);
         }
-        
+
     }
 
 
