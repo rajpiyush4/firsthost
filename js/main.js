@@ -51,45 +51,39 @@ window.onload = () => {
         slide[e].style = "animation:closepage 0.7s 1 forwards;"
         slide[e2].style = "animation:closepage 0.7s 1 forwards;"
 
-        // navlist[e].style = 'border-bottom:none;';
-        // navlist[e2].style = 'border-bottom:none;';
+        navlist[e].style = 'border-bottom:none;';
+        navlist[e2].style = 'border-bottom:none;';
         $All(".center")[0].style = "transiton:0.7s; filter:brightness(90%) blur(0.1px);";
-        // navlist[0].style = 'border-bottom:none;';
+        navlist[0].style = 'border-bottom:none;';
 
     }
 
     var lastPage;
     for (let i = 0; i < navlist.length; i++) {
-        
-        navlist[i].onmouseover = function () {
-            for (let x = 0; x < navlist.length; x++) {
-                navlist[x].style.border = 'none';
+        navlist[i].onclick = () => {
+            if (i == 0) {
+                mainPage.style = `background-color:#373034;`;
+                pageWrap.style = `background-color:#373034;`;
+                nav.style = "color:whitesmoke;";
+                $('#circle').style = "background-color:#f9d726;"
+                slide[lastPage].style = "animation:closepage 1s 1 forwards;";
+                navlist[lastPage].style = 'border-bottom:none;';
+
+                lastPage = i;
+                $All(".center")[0].style = "transiton:0.7s; filter:brightness(100%) blur(0px);";
+                navlist[i].style = 'border-bottom:2px solid honeydew;border-radius:1px;';
+
+
             }
-
-
-            navlist[i].onclick = () => {
-                if (i == 0) {
-                    mainPage.style = `background-color:#fca311;`;
-                    pageWrap.style = `background-color:#fca311;`;
-                    nav.style = "color:#14213d;";
-                    $('#circle').style = "background-color:#f9d726;"
-                    slide[lastPage].style = "animation:closepage 1s 1 forwards;";
-                    lastPage = 0;
-                    $All(".center")[0].style = "transiton:0.7s; filter:brightness(100%) blur(0px);";
-
-
-                }
-                if (i > 0) {
-                    slidepage(slide[i], colorArr[i])
-                    lastPage = i;
-                    navlist[i].style = 'border-bottom:2px solid black;border-radius:1px;';
-                }
-            }
-            navlist[i].onmouseleave = function () {
-                navlist[lastPage].style = 'border-bottom:2px solid #334;border-radius:1px;';
-
+            if (i > 0) {
+                slidepage(slide[i], colorArr[i])
+                lastPage = i;
+                navlist[i].style = 'border-bottom:2px solid black;border-radius:1px;';
             }
         }
+
+
+
     }
 
 
@@ -106,7 +100,7 @@ window.onload = () => {
             // var creatediv=document.createElement("div")
             newList += 1;
             nameList.innerHTML += `<div class="contain-list"> 
-        <div class='name-list'><span> ${nameInput.value}<span class='address-list'> (${addInput.value}) </span></span> <img class='comment-png' src="/png/comment.png"  alt=""></div>
+        <div class='name-list'><span> ${nameInput.value}<span class='address-list'> (${addInput.value}) </span></span> <img class='comment-png' src="/minorpro2.0/png/comment.png"  alt=""></div>
         
         </div>`
 
@@ -227,4 +221,10 @@ window.onload = () => {
 
 
 
+
+
+
+
+
+    
 }
