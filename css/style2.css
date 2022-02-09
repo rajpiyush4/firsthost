@@ -1,4 +1,3 @@
-
 @media screen and (max-width: 650px) {
     .nav {
         height: var(--navHeight);
@@ -57,10 +56,38 @@
     #circle2 {
         display: none;
     }
-    .about-grid-item1{
+
+    .about-grid-item1 {
         width: 100vw;
     }
+    .nav-list::before{
+        width: 0;
+        opacity: 0;
+    }
+    .profile{
+        display: none;
+    }
 
+    /* #center-wrapper {
+        height: auto;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        overflow-y: scroll;
+      
+      }
+  
+      .center-item{
+  
+          width: 80%;
+          height: 500px;
+          margin: 20px;
+      }
+  
+      .center-item:hover{
+          width: 80%;
+          height: 550px;
+      } */
 }
 
 @media screen and (max-width: 300px) {
@@ -104,42 +131,70 @@
 
     #homesvg {
         display: none;
-    }
+    } 
 }
+
 @keyframes slidepage {
     0% {
         transform: translate(100vw);
         opacity: 0;
     }
 
-    30% {
+    40% {
         opacity: 0.6;
+        transform: scale(0.38, 0.41);
     }
 
-    95% {
-        transform: translate(-8px);
+    45% {
+        opacity: 0.64;
+        transform: scale(0.42, 0.42);
+    }
+
+    50% {
+        transform: scale(0.40, 0.45);
+    }
+
+    60% {
+        transform: scale(0.43, 0.41);
+    }
+
+    70% {
+        transform: scale(0.39, 0.44);
+    }
+
+    75% {
+        transform: scale(0.39, 0.44);
+    }
+
+    88% {
+        transform: scale(1.07, 1.04);
     }
 
     100% {
-        transform: translate(0px);
+        transform: translate(0px) scale(1);
         opacity: 1;
     }
 }
 
 @keyframes closepage {
     0% {
-        transform: translate(0px, 0px);
+        transform: translate(0px) scale(1);
         opacity: 1;
     }
 
-    60% {
-        opacity: 0.7;
+    40% {
+        opacity: 0.6;
+        transform: scale(0.38, 0.41);
     }
-
+    88% {
+        transform: scale(1.04, 1.02);
+    }
     100% {
-        transform: translate(-100vw, 0px);
+        transform: translate(100vw);
         opacity: 0;
     }
+
+
 }
 
 @keyframes circle {
@@ -198,25 +253,29 @@
         opacity: 1;
     }
 }
-@keyframes slideup{
-    0%{
-        height: 20vh;
-        top: 85%;
+
+@keyframes slideup {
+    0% {
+        height: 0vh;
+        top: 100%;
 
     }
-    100%{
+
+    100% {
         height: 80vh;
-      top: 20%;
+        top: 20%;
     }
 }
-@keyframes slidedown{
-    0%{
+
+@keyframes slidedown {
+    0% {
         height: 80vh;
         top: 20%;
 
     }
-    100%{
+
+    100% {
         height: 0;
-      top: 85%;
+        top: 100%;
     }
 }
