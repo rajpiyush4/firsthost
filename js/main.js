@@ -100,7 +100,7 @@ window.onload = () => {
             // var creatediv=document.createElement("div")
             newList += 1;
             nameList.innerHTML += `<div class="contain-list"> 
-        <div class='name-list'><span> ${nameInput.value}<span class='address-list'> (${addInput.value}) </span></span> <img class='comment-png' src="/minorpro2.0/png/comment.png"  alt=""></div>
+        <div class='name-list'><span> ${nameInput.value}<span class='address-list'> (${addInput.value}) </span></span> <img class='comment-png' src="/png/comment.png"  alt=""></div>
         
         </div>`
 
