@@ -87,13 +87,13 @@ nav ul {
 }
 
 nav ul li {
-    margin-right: 3rem;
+    margin-right: 0.3rem;
     user-select: none;
     font-size: 14px;
     font-weight: bold;
     /* overflow: hidden; */
     font-family: serif;
-    padding-bottom: 3px;
+    padding: 10px 15px;
 }
 
 .restaurant, .hostel, .homepage, .location {
@@ -116,8 +116,8 @@ nav ul li:hover {
     position: absolute;
     width: 40px;
     height: 40px;
-    left: 95%;
-    top: 15%;
+    right: 1rem;
+    top: 5%;
     background-image: url("/png/login\ \(1\).png");
     background-size: cover;
     z-index: 999;
@@ -162,6 +162,8 @@ nav ul li:hover {
     height: calc(99vh - var(--navHeight));
     background-image: url('/png/undraw_Dreamer_re_9tua.png');
     background-size: cover;
+  
+    filter: brightness(90%);
     width: 100vw;
 }
 
@@ -203,7 +205,7 @@ nav ul li:hover {
 }
 
 .input {
-    background-color: whitesmoke;
+    background-color: #e6e6e6;
     width: 85%;
     text-transform: capitalize;
     letter-spacing: 2px;
@@ -389,7 +391,9 @@ nav ul li:hover {
     background-size: cover;
     /* transform: translateY(-60px); */
 }
-
+#btn-add,.comment-btn,#listing-btn,#rest-submit{
+    cursor: pointer;
+}
 .center {
    
     z-index: 100;
@@ -398,11 +402,16 @@ nav ul li:hover {
     
 }
 #center-wrapper{
-    width: 100%;
-    height: 70%;
-    background-image: url("/png/starwars.svg");
+    width: 90%;
+    margin: auto;
+    height: clamp(200px,50vw,580px);
+    background-image: url("/png/starwars.svg") ;
     background-size: cover;
-
+    /* background-position:-50px ; */
+    background-repeat: no-repeat;
+    transform: translateY(180px);
+    opacity: 0.1;
+    transition: 2s;
 }
 .clipcircle {
 
@@ -420,7 +429,7 @@ nav ul li:hover {
     height: 15rem;
     animation: circle 20s infinite;
     z-index: 102;
-    background-color: #f9d726;
+    background-color: #a5a29e;
     transition: 0.7s;
 }
 
@@ -449,21 +458,26 @@ nav ul li:hover {
     position: absolute;
     content: "If you have any question, send us e-mail or just follow us on the socials.";
     display: block;
-    left: 30%;
-    top: 85%;
+    left: 50%;
+    bottom: 20px;
     word-spacing: 2px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: rgb(248, 248, 248);
     font-weight: 200;
-    padding: 10px;
+    /* padding: 10px; */
+    text-align: center;
+    transform: translateX(-50%);
     /* border-left: rgb(192, 186, 186) solid 3px; */
+    width: clamp(20px,90vw,600px);
 }
 
 #locate::before {
     position: absolute;
     content: "FIND US";
     display: block;
-    left: 46%;
+    left: 50%;
+    transform: translateX(-50%);
+
     top: 10%;
     font-size: 28px;
     word-spacing: 3px;
@@ -561,7 +575,7 @@ nav ul li:hover {
     background-size: cover;
     background-position-y: -60px;
     width: 100%;
-    height: 100vh;
+    height: calc(100vh + var(--navHeight) / 1.8);
     position: relative;
     filter: brightness(60%);
     top: calc(0px - var(--navHeight));
@@ -637,7 +651,7 @@ nav ul li:hover {
     z-index: 10;
 }
 
-#rest-nav button::before {
+#rest-nav button::before{
     content: "";
     position: absolute;
     left: 0;
@@ -650,11 +664,11 @@ nav ul li:hover {
     transition: 0.71s;
 }
 
-#rest-nav button:hover  {
+#rest-nav button:hover{
     color: #ddd;
 }
 
-#rest-nav button:hover:before {
+#rest-nav button:hover:before,nav ul li:hover:before {
     height: 120%;
 }
 
