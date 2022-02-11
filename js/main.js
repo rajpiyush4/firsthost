@@ -2,10 +2,17 @@ window.onload = () => {
 
 
 
+
+
     var $ = document.querySelector.bind(document)
     var $All = document.querySelectorAll.bind(document)
     $("html").style.display = "block";
     $("body").style.display = "block";
+    setTimeout(function () {
+        $('#center-wrapper').style = 'opacity:1;transform:translateY(0px)';
+    }, 400)
+
+
 
     var grid = $("#grid")
     var mainPage = $("#main-page")
@@ -65,13 +72,18 @@ window.onload = () => {
                 mainPage.style = `background-color:#373034;`;
                 pageWrap.style = `background-color:#373034;`;
                 nav.style = "color:whitesmoke;";
-                $('#circle').style = "background-color:#f9d726;"
+                $('#circle').style = "background-color:#a5a29e;"
                 slide[lastPage].style = "animation:closepage 1s 1 forwards;";
                 navlist[lastPage].style = 'border-bottom:none;';
 
                 lastPage = i;
                 $All(".center")[0].style = "transiton:0.7s; filter:brightness(100%) blur(0px);";
                 navlist[i].style = 'border-bottom:2px solid honeydew;border-radius:1px;';
+
+                $('#center-wrapper').style = 'transition:0s;opacity:0;transform:translateY(200px)';
+                setTimeout(function () {
+                    $('#center-wrapper').style = 'transition:2s ease-out`;opacity:1;transform:translateY(0px)';
+                }, 400)
 
 
             }
@@ -94,6 +106,10 @@ window.onload = () => {
     var addInput = $("#address-input")
     var btnadd = $("#btn-add")
     var newList = -1;
+    // var storeH = {
+    //     hostelN: null,
+    //     addressN: null
+    // };
     btnadd.addEventListener("click", () => {
 
         if (addInput.value != "" && nameInput.value != "") {
@@ -103,7 +119,9 @@ window.onload = () => {
         <div class='name-list'><span> ${nameInput.value}<span class='address-list'> (${addInput.value}) </span></span> <img class='comment-png' src="/png/comment.png"  alt=""></div>
         
         </div>`
-
+            // storeH.hostelN = nameInput.value;
+            // storeH.addressN = addInput.value;
+            // pushData(storeH);
             nameInput.value = ""
             addInput.value = "";
             update();
@@ -128,10 +146,24 @@ window.onload = () => {
 
     })
 
+    
+       // popup('this',30);
+       function popup(content, interval) {
+        let elem = document.createElement('div');
+        // elem.class = 'popup';
+        document.body.appendChild(elem);
+        elem.innerHTML = content;
+        // elem.style.zIndex = '999';
+        elem.style = `position:fixed;z-index:9999; bottom:60px; padding:10px 15px;
+        overflow:hidden;width:clamp(70px,100vw,380px);
+        background-color:#223;color:#eee;animation:popup-slide ${interval}s 1; border-radius:2px; text-align:center; `;
+        // console.log(elem);
+        setTimeout(function () {
+            elem.style = 'diplay:none;'
+            elem.remove();
+        }, interval * 1000);
 
-
-
-
+    }
 
 
 
@@ -156,23 +188,7 @@ window.onload = () => {
         }
     }
 
-    // popup('this',30);
-    function popup(content, interval) {
-        let elem = document.createElement('div');
-        // elem.class = 'popup';
-        document.body.appendChild(elem);
-        elem.innerHTML = content;
-        // elem.style.zIndex = '999';
-        elem.style = `position:fixed;z-index:9999; bottom:60px; padding:10px 15px;
-        overflow:hidden;width:clamp(70px,100vw,380px);
-        background-color:#223;color:#eee;animation:popup-slide ${interval}s 1; border-radius:2px; text-align:center; `;
-        // console.log(elem);
-        setTimeout(function () {
-            elem.style = 'diplay:none;'
-            elem.remove();
-        }, interval * 1000);
 
-    }
 
 
     //us page animations
@@ -220,11 +236,4 @@ window.onload = () => {
     }
 
 
-
-
-
-
-
-
-    
 }
