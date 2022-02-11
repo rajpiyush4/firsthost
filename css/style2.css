@@ -67,6 +67,9 @@
     .profile{
         display: none;
     }
+    .clipcircle{
+        display:none;   
+    }
 
 }
 
@@ -112,6 +115,9 @@
     #homesvg {
         display: none;
     } 
+    .clipcircle{
+        display:none;   
+    }
 }
 
 @keyframes slidepage {
