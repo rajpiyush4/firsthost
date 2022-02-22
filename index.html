@@ -6,10 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Go4everything</title>
-    <!--  <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@1,200&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous"> -->
-    <!-- <script src=" https://firebase.google.com/docs/web/setup#available-libraries"> import { initializeApp } from "firebase/app";</script> -->
+    <script src=" https://firebase.google.com/docs/web/setup#available-libraries"> import { initializeApp } from "firebase/app";</script>
 
     <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="/css/style2.css">
@@ -49,8 +46,9 @@
 
 
             <div id="log-box"></div>
-            <div id="circle" class="clipcircle"></div>
-            <div id="circle2" class="clipcircle"></div>
+
+            <!-- <div id="circle" class="clipcircle"></div>
+            <div id="circle2" class="clipcircle"></div> -->
 
 
             <div class='slide' style="display:none;"></div>
@@ -58,43 +56,104 @@
             <div class="slide" id="about-page">
                 <div id="about-page-wrapper">
                     <div class="about-grid-item1 ">
+
+                        <div style=" text-transform: capitalize;
+                       letter-spacing: 2px;
+                       height: 40px;
+                       font-size: 1rem;font-weight:500;margin-left: 3px;"> Send And Help</div>
+
                         <div id="inputs">
+
                             <div id='hostel-input-parent'>
                                 <input type="text" id="name-input" class="input" placeholder="Hostels/Pg/flats"
                                     required>
                                 <input type="text" class="input" id="address-input" placeholder="Address" required>
                             </div>
-                            <button id="btn-add"> LIST IT!</button>
+
+                            <button id="btn-add">Send</button>
+
                         </div>
                         <div id="name-list"></div>
+
+
 
                     </div>
 
                     <div class="about-grid-item2" id="comment-page">
 
-                        <div id="comment-box">
+                        <div style="width: 70%; margin: auto;">
 
-                            <div id="user-png"><svg xmlns="http://www.w3.org/2000/svg" height="30px" viewBox="0 0 28 28"
-                                    width="30px" fill="#555">
-                                    <path d="M0 0h24v24H0z" fill="none" />
-                                    <path
-                                        d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z" />
-                                </svg></div>
+                            <div class="pg-list">
+                                <div class="up"> Maruti pg <br><br> Maruti pg </div>
+                            </div>
+                            <div class="pg-list">
+                                <div class="up">Balaji pg <span>(House No. 38)</span>
+                                    <br><br> Balaji pg <span>(House No. 38)</span>
+                                </div>
+                            </div>
+                            <div class="pg-list space">
 
-                            <textarea type="text" placeholder="Add a comment here" id="comment-input" cols="50"
-                                rows="10"></textarea>
-
-
-                        </div><br>
-                        <div id="cmt-btn-box">
-                            <button class="comment-btn" type="button">Comment</button>
-                            <button class="comment-btn" type="button">Delete</button>
+                                <div class="up">
+                                    <a href="https://goo.gl/maps/KoSKQoiogj81jith7"> Arya pg <span>(For girls)</span>
+                                        <br><br>Arya pg <span>(For girls)</span></a>
+                                </div>
+                            </div>
+                            <div class="pg-list space">
+                                <div class="up">
+                                    <a href=" https://goo.gl/maps/srH6pkqt7ZdbUt8G8"> Ashiyana pg <span>(House
+                                            No.124)</span>
+                                        <br><br>Ashiyana pg <span>(House No.124)</span></a>
+                                </div>
+                            </div>
+                            <div class="pg-list ">
+                                <div class="up">Ashiyana pg <span>(House No.143)</span>
+                                    <br><br>Ashiyana pg <span>(House No.143)</span>
+                                </div>
+                            </div>
+                            <div class="pg-list space">
+                                <div class="up"> Regal pg <span>(House No.38 ,For girls)</span>
+                                    <br><br> Regal pg <span>(House No.38 ,For girls)</span>
+                                </div>
+                            </div>
+                            <div class="pg-list space">
+                                <div class="up"> pg <span>(Near Ashwani Hospital)</span>
+                                    <br><br>pg <span>(Near Ashwani Hospital)</span>
+                                </div>
+                            </div>
                         </div>
+
+
+                        <!-- <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d14042.039350231937!2d77.31465712451408!3d28.373665200325206!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v1645453492768!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe> -->
+
+
+
 
                     </div>
 
 
+                    <div id="about-grid-item3">
+                        <div id="comment-box">
 
+                            <div><svg id="user-png" xmlns="http://www.w3.org/2000/svg" height="30px" viewBox="0 0 28 28"
+                                    width="30px" fill="#555">
+                                    <path d="M0 0h24v24H0z" fill="none" />
+                                    <path
+                                        d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z" />
+                                </svg>
+                                <textarea type="text" placeholder="Add a comment here" id="comment-input" cols="50"
+                                    rows="10"></textarea>
+                            </div>
+
+
+                            <div id="cmt-btn-box">
+                                <button class="comment-btn" type="button">Comment</button>
+                                <button class="comment-btn" type="button">Delete</button>
+
+                            </div>
+                        </div>
+                        <br>
+
+                    </div>
                 </div>
             </div>
 
@@ -119,8 +178,13 @@
 
                                 <h2> Here is the </h2>
                                 <h3>Amazing list</h3>
-                                <div id="arrowdown"></div>
-
+                                <div style="width: 50%;">
+                                    <div class="pg-list space">
+                                        <div class="up"> Milan Restaurant <span>(Near Chotu Ram Park)</span>
+                                            <br><br>Milan <span>(Near Chotu Ram Park)</span>
+                                        </div>
+                                    </div>
+                                </div>
 
                             </div>
 
@@ -130,7 +194,7 @@
                                 <input type="text" placeholder="Address : ">
                                 <div id="rest-submit">
                                     <div id="arrowleft"></div>
-                                    <span> LIST IT! </span>
+                                    <span> Send </span>
                                 </div>
                             </div>
 
@@ -188,23 +252,89 @@
 
             <div class="center">
                 <div id="center-wrapper">
-                
+                    <div id="center-item1">
+
+                        <hr width="90%" style="margin: auto;">
+
+                        <div id="upper-box">ONE-DAY</div>
+                        <br><br>
+                        <hr width="90%" style="margin: auto;">
+                    </div>
+
+
+
+
+
+                    <div id="center-item2">
+                        <div style="width: 40%;height: 100%;margin-left: 4.5em;color: hsl(27, 5%, 47%);">01</div>
+
+                        <div id="lower-box">
+
+                            <!-- <div style="font-size: 1.2rem;">
+                                <div > “<span style="opacity: 0;">space</span> Once we got started,</div>
+                                <div> every part of the organization wanted more.</div>
+                                <div>Remarkable success.</div>
+                            </div> -->
+
+
+                            <div>
+
+                                <div class="open-close" id="open-close1">About.
+                                    <div style="margin-top: 2em;">
+
+                                        <div style="font-size: 1rem;">
+
+                                            Hello friends, Welcome to our website this website is an experiment to help
+                                            college students.
+
+                                            We all face problems during college time like which place is better to
+                                            stay ,which that particular place is better for fun ?
+
+                                            So this is the platform where you can check these places, some are already
+                                            listed here and also you can provide us information like these and help
+                                            others.
+
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <hr>
+                                <!-- <div class="open-close" id="open-close1">Motive
+                                    <div style="margin-top: 2em;">
+
+                                        <p style="font-size: 1rem ;">
+
+
+                                            Our Motive
+
+                                            We want to create an environment on our website where you can interact with
+                                            your college friends, Where you can learn a lot of things from there
+                                            experience So this website is all about sharing ideas</p>
+                                    </div>
+
+                                </div>
+                                <hr> -->
+                                <div class="open-close">Also.
+
+                                </div>
+                                <hr>
+                            </div>
+
+
+                        </div>
+
+
+                    </div>
+
+
 
 
                 </div>
-
-
             </div>
 
+            <script src="/js/main.js"></script>
+            <script src="/js/main2.js"></script>
 
-
-
-        </div>
-    </div>
-
-    <script src="/js/main.js"></script>
-    <script src="/js/main2.js"></script>
-    
 
 </body>
 
