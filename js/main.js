@@ -1,9 +1,5 @@
 window.onload = () => {
 
-
-
-
-
     var $ = document.querySelector.bind(document)
     var $All = document.querySelectorAll.bind(document);
 
@@ -30,10 +26,8 @@ window.onload = () => {
 
     var colorArr = ['black', '#FFECB3', 'transparent', '#525252'];
     //#141414 #4a4a4a
-
-
-
     //page slide animation
+    
     var lastPage;
 
     function slidepage(elem, color) {
