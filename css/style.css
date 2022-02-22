@@ -578,7 +578,7 @@ background-color: #333;
 }
 
 #rest-page-wrapper {
-    background: url("/minorpro2.0/png/rest.jpg");
+    background: url("/png/rest.jpg");
     /* background-attachment: fixed; */
     background-size: cover;
     background-position-y: -60px;
