@@ -113,10 +113,10 @@ window.onload = () => {
     var addInput = $("#address-input");
     var newList = -1;
 
-    var storeH = {
-        hostelN: null,
-        addressN: null
-    };
+    // var storeH = {
+    //     hostelN: null,
+    //     addressN: null
+    // };
 
     $("#btn-add").addEventListener("click", () => {
 
@@ -129,9 +129,9 @@ window.onload = () => {
             // </div>`
             nameInput.value = ""
             addInput.value = "";
-            storeH.hostelN = nameInput.value;
-            storeH.addressN = addInput.value;
-            pushData(storeH);
+            // storeH.hostelN = nameInput.value;
+            // storeH.addressN = addInput.value;
+            // pushData(storeH);
 
 
             // update();
@@ -151,22 +151,7 @@ window.onload = () => {
 
     });
 
-    // open and close box 
-    var bool2 = true;
-    var openClose = $("#open-close1");
-
-    openClose.addEventListener("click", () => {
-
-        if (bool2) {
-            openClose.style = "height:6em"; console.log("sdlfj")
-            bool2 = false;
-        }
-        else {
-            openClose.style = "height:3em";
-            bool2 = true;
-        }
-
-    });
+  
 
 
 
@@ -222,22 +207,6 @@ window.onload = () => {
         }
     }
 
-//pop up
-
-function popup(content, interval) {
-    let elem = document.createElement('div');
-    // elem.class = 'popup';
-    document.body.appendChild(elem);
-    elem.innerHTML = content;
-    // elem.style.zIndex = '999';
-    elem.style = `position:fixed;z-index:9999; bottom:60px; padding:10px 15px;
-    overflow:hidden;width:clamp(70px,100vw,380px);
-    background-color:#223;color:#eee;animation:popup-slide ${interval}s 1; border-radius:2px; text-align:center; `;
-    // console.log(elem);
-    setTimeout(function () {
-        elem.style = 'diplay:none;'
-        elem.remove();
-    }, interval * 1000);
 
     
 
