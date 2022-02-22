@@ -47,7 +47,9 @@ html, body {
 
     --color1: rgb(192, 161, 120);
     --color2: radial-gradient(ellipse at right, #f3a32a 0%, rgb(241, 137, 40)100%);
-    --navHeight: 5rem;
+    --navHeight: 4rem;
+    --listHt:2.7rem;
+    --listHt2:-3.7rem;
 }
 
 ::-webkit-scrollbar {
@@ -64,16 +66,16 @@ html, body {
     justify-content: space-between;
     align-items: center;
     transition: 300ms ease-in-out;
-    color: whitesmoke;
+    color: hsl(27, 5%, 47%);
     backdrop-filter: blur(3px);
-    
+    font-family: sans-serif;
 
 }
 
 nav h1 {
     margin-left: 1em;
     font-size: 5vmin;
-    font-family: serif;
+    
 }
 
 nav ul {
@@ -92,7 +94,7 @@ nav ul li {
     font-size: 14px;
     font-weight: bold;
     /* overflow: hidden; */
-    font-family: serif;
+   
     padding: 10px 15px;
 }
 
@@ -130,12 +132,12 @@ nav ul li:hover {
 
 
 .main-page {
-    background-color: #373034;
+    background-color: #faf2eb;
     transition: 0.7s;
 }
 
 .main-page-wrapper {
-    background-color: #373034;
+    background-color: #faf2eb;
     position: relative;
     top: var(--navHeight);
     transition: 1s;
@@ -160,26 +162,22 @@ nav ul li:hover {
     /* display: flex;
     justify-content: center; */
     height: calc(99vh - var(--navHeight));
-    background-image: url('/png/undraw_Dreamer_re_9tua.png');
-    background-size: cover;
-  
+    /* background-image: url('/minorpro2.0/png/undraw_Dreamer_re_9tua.png');
+    background-size: cover; */
+    display: flex;
     filter: brightness(90%);
     width: 100vw;
 }
 
 .about-grid-item1 {
-    width: 50vw;
+    width: 20vw;
     padding-left: 10px;
     margin-top: 30px;
     padding-top: 30px;
     backdrop-filter: blur(2px);
     overflow-y: scroll;
     scroll-behavior: smooth;
-    /* box-shadow: var(--radval); */
-    margin: auto;
-    transition: 1s;
     height: 96%;
-    
 }
 
 
@@ -188,8 +186,6 @@ nav ul li:hover {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-
-    /* border: 1px solid black; */
 }
 
 #hostel-input-parent {
@@ -205,7 +201,7 @@ nav ul li:hover {
 }
 
 .input {
-    background-color: #e6e6e6;
+    background-color: #ffecb3;
     width: 85%;
     text-transform: capitalize;
     letter-spacing: 2px;
@@ -216,7 +212,7 @@ nav ul li:hover {
     border: none;
     outline: none;
     transition: ease-in-out 0.5s;
-    border-left: 3px solid rgba(43, 38, 38, 0.705);
+  
     border-radius: 2px;
 }
 
@@ -225,7 +221,7 @@ nav ul li:hover {
 }
 
 #btn-add {
-    background: white;
+    background: #e9c65d;
     border: none;
     outline: none;
     font-size: 16px;
@@ -293,8 +289,8 @@ nav ul li:hover {
 }
 
 .comment-png {
-    width: 30px;
-    height: 30px;
+    width: 20px;
+    height: 20px;
     /* z-index: 10;    ??*/
     transition: 0.1s;
     margin: 5px 1px 0px 2em;
@@ -306,93 +302,71 @@ nav ul li:hover {
 
 .about-grid-item2 {
     width: 50vw;
-    position: absolute;
     top: 1%;
     height: 96%;
     padding-left: 10px;
     padding-top: 30px;
     overflow-y: scroll;
     scroll-behavior: smooth;
-    border-left: 2px #ccc solid;
+    border-left: 1px #e6d6a8 solid;
     backdrop-filter: blur(6px);
-    opacity: 0;
-    transform: translate(100vw);
+
 
 }
 
-#comment-box {
-    /* border-top: black 1px solid; */
-    display: flex;
-    justify-content: center;
-
+.pg-list {
+    margin-left: 40px; 
+    height: var(--listHt);
+    border-bottom: solid 2px rgb(36, 33, 33);
+    transition: 0.5s linear ease-out;
+    overflow: hidden;
+    transition: 0.5s;
+    user-select: none;
 }
-
-#comment-input {
-
-    background: #fff;
-    width: 65%;
-    resize: none;
+.up {
+    font-size: 1.5em;
+    transition: 0.4s 0.5s linear;
+    
+}
+.up span {
     font-size: 16px;
-    border: 1.1px #ccc solid;
-    border-radius: 2px;
-    letter-spacing: 1.3px;
-    text-indent: 4px;
-    height: 80px;
-    padding: 5.5px;
-    outline: none;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    box-shadow: none;
+}
+.pg-list:hover .up {
+    transform: translateY( var(--listHt2));
 }
 
-#comment-input:focus {
-    box-shadow: 0px 0px 3px #55d;
+.space {
+    margin-top: 40px;
+} 
+
+#about-grid-item3{
+  border-left: 1px #e6d6a8 solid;
 }
-
-#comment-input::placeholder {
-    color: rgba(30, 30, 30, 0.6);
-    font-size: 14px;
-    letter-spacing: 0.6px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    text-indent: 5px;
-}
-
-
-#cmt-btn-box {
-    /* width: 50%; */
-    margin: auto;
+#comment-box{
     position: relative;
-    /* right: 0; */
-    display: inline;
+    top: 5%;
+    padding-left: 1rem;
 }
-
-.comment-btn {
-    padding: 7px 15px 7px 15px;
-    font-weight: 100;
-    /* box-shadow: var(--radval); */
-    /* width: 80px;
-    height: 30px; */
-    background-color: rgb(42, 103, 182);
+#comment-input{
+    padding: 10px;
+    max-width: 90%;
+    min-width: 90%;
+    max-height: 5em;
+    min-height: 5em;
+    background-color: #ffecb3;
+}
+#user-png{
+transform: translateY(-130%);
+}
+.comment-btn{
+    position: relative;
+   transform: translateY(10px);
+    left: 65%;
+    background-color: rgb(255, 222, 149);
+    padding: 5px;
+    border-radius: 3px;
+    font-weight: 600;
     border: none;
-    border-radius: 1.4px;
-    color: rgb(219, 200, 253);
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-
-
-}
-
-#user-png {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 40px;
-    height: 40px;
-    margin-right: 5px;
-    border-radius: 50%;
-    background-size: cover;
-    /* transform: translateY(-60px); */
-}
-#btn-add,.comment-btn,#listing-btn,#rest-submit{
-    cursor: pointer;
 }
 .center {
    
@@ -402,55 +376,79 @@ nav ul li:hover {
     
 }
 #center-wrapper{
-    width: 90%;
+    width: 100%;
+    height: 85vh;
     margin: auto;
-    height: clamp(200px,50vw,580px);
-    background-image: url("/png/starwars.svg") ;
+    display: flex;
+    flex-direction: column;
+    overflow-y: scroll;
+    
+    /* height: clamp(100px,50vw,580px);
+    background-image: url("/minorpro2.0/png/starwars.svg") ;
     background-size: cover;
-    /* background-position:-50px ; */
     background-repeat: no-repeat;
     transform: translateY(180px);
     opacity: 0.1;
-    transition: 2s;
-}
-.clipcircle {
-
-    clip-path: circle(at 40%);
-    transition: 1.2s;
-    opacity: 0.87;
-    animation: circle 18s infinite;
+    transition: 2s; */
 }
 
-#circle {
-    position: absolute;
-    top: -7rem;
-    left: -3rem;
-    width: 15rem;
-    height: 15rem;
-    animation: circle 20s infinite;
-    z-index: 102;
-    background-color: #a5a29e;
-    transition: 0.7s;
+#upper-box{
+    top: 50%;
+    font-size: 2.5em;
+    margin: 0.9em 0 0 2em;
+    font-weight: 500;
+    color: hsl(27, 5%, 47%);
 }
 
-#circle2 {
-    background-color: rgb(60, 60, 126);
-    position: absolute;
-    bottom: -1rem;
-    right: -10rem;
-    width: 25rem;
-    height: 25rem;
-    z-index: 10;
-    animation: circle 30s 3s infinite;
-    opacity: 0.97;
+#center-item1{
+    width: 100%;
+    height: 30vh;
+    /* display: flex;
+    align-items: center; */
+
+
 }
 
 
-.popup {}
+#center-item2{
+    width: 99%;
+    height: 60vh;
+    display: flex;
+    font-family: sans-serif;
 
+}
+#lower-box{
+    
+    padding-right: 2em;
+    width: 60%;
+    font-size: 1rem;
+    font-weight: 600;
+    color: hsl(27, 5%, 47%);
+    text-align: left;
+    
+}
+.open-close{
+    padding: 1em;
+    border-top: #9a9a9a 1px solid;
+    margin-top: 1em;
+    height: 4em;
+    transition: 0.3s;
+    font-size: 1.1rem;
+    letter-spacing: 2px;
+    line-height: 20px;
+    overflow: hidden;
+    overflow: scroll;
+    scroll-behavior: smooth;
+}
+
+.open-close:hover{
+    /* color: hsl(27, 5%, 27%); */
+    border-color: hsl(27, 5%, 27%);
+     height: 8em;
+     cursor: pointer;
+}
 #locate {
     display: flex;
-    /* position: relative; */
     opacity: 0;
 }
 
@@ -473,11 +471,10 @@ nav ul li:hover {
 
 #locate::before {
     position: absolute;
-    content: "FIND US";
+    content: "SOCIALS";
     display: block;
     left: 50%;
     transform: translateX(-50%);
-
     top: 10%;
     font-size: 28px;
     word-spacing: 3px;
@@ -486,14 +483,12 @@ nav ul li:hover {
     color: rgb(251, 249, 255);
     font-weight: 50;
 
-    /* border-left: rgb(192, 186, 186) solid 3px; */
 }
 
 #us-box1 {
     background-color: #4a4a4a;
     width: 50%;
     height: 97%;
-    /* position: relative; */
     display: flex;
     justify-content: flex-end;
     align-items: center;
@@ -533,6 +528,19 @@ nav ul li:hover {
 
 
 }
+#profile1{
+background-image: url("/png/piyush.jpeg");
+background-size: cover;
+background-blend-mode: overlay;
+background-color: #333;
+}
+#profile2{
+background-image: url("/png/sumit.png");
+background-size: cover;
+background-blend-mode: overlay;
+background-color: #333;
+}
+
 
 .linkedin {
     background-image: url("/png/linkedin.svg");
@@ -570,7 +578,7 @@ nav ul li:hover {
 }
 
 #rest-page-wrapper {
-    background: url("/png/rest.jpg");
+    background: url("/minorpro2.0/png/rest.jpg");
     /* background-attachment: fixed; */
     background-size: cover;
     background-position-y: -60px;
@@ -688,7 +696,7 @@ nav ul li:hover {
     /* top: 20%; */
     left: 0;
     top: 100%;
-    background-color: #c8b36b;
+    background-color: #f1dc97;
     border-radius: 10% 10% 0 0;
     transition: ease-in-out;
    
@@ -699,7 +707,7 @@ nav ul li:hover {
     width:15rem;
     height: 40%;
     border-radius: 50%;
-    background-color:#c8b36b;
+    background-color:#f1dc97;
     z-index: -1;
     position: absolute;
     top: -10%;
@@ -716,7 +724,7 @@ nav ul li:hover {
     transform: translateY(30px);
 }
 #slideup-item1{
-    width: 50%;
+    width: 70%;
     height: 90%;
 }
 
@@ -737,7 +745,7 @@ nav ul li:hover {
     margin: auto;
 }
 #slideup-item2{
-    width: 50%;
+    width: 30%;
     height: 90%;
     display: flex;
     flex-direction: column;
@@ -749,9 +757,9 @@ nav ul li:hover {
     width: 60%;
     text-transform: capitalize;
     letter-spacing: 2px;
-    height: 18%;
+    height: 13%;
     border-radius: 10px;
-    background-color: #af9c5b;
+    background-color: #e7cf81;
     font-size: 1.5rem;
     font-family: serif;
     padding: 10px 20px;
@@ -760,7 +768,7 @@ nav ul li:hover {
     outline: none;
 }
 #slideup-item2 span{
-    font-size: 23px;
+    font-size: 1rem;
     margin:1px 10px;
     letter-spacing: 0.4px;
 }
