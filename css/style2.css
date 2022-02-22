@@ -58,7 +58,10 @@
     }
 
     .about-grid-item1 {
-        width: 100vw;
+        width: 30vw;
+    }
+    .about-grid-item2{
+        width: 70vw;
     }
     .nav-list::before{
         width: 0;
@@ -68,7 +71,7 @@
         display: none;
     }
     .clipcircle{
-        display:none;   
+        display: none;
     }
 
 }
@@ -115,9 +118,6 @@
     #homesvg {
         display: none;
     } 
-    .clipcircle{
-        display:none;   
-    }
 }
 
 @keyframes slidepage {
