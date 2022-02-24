@@ -314,25 +314,29 @@ nav ul li:hover {
 
 }
 
+
 .pg-list {
     margin-left: 40px; 
     height: var(--listHt);
-    border-bottom: solid 2px rgb(36, 33, 33);
+    border-bottom: #e6d6a8 solid 2px ;
     transition: 0.5s linear ease-out;
     overflow: hidden;
-    transition: 0.5s;
+    transition: 0.3s;
     user-select: none;
 }
 .up {
+
     font-size: 1.5em;
-    transition: 0.4s 0.5s linear;
+    font-weight: 500;
+    color: #4a4a4a;
+    transition: 0.2s 0.2s linear;
     
 }
 .up span {
     font-size: 16px;
 }
 .pg-list:hover .up {
-    transform: translateY( var(--listHt2));
+  background-color: #e7cf81;
 }
 
 .space {
@@ -428,6 +432,7 @@ transform: translateY(-130%);
     
 }
 .open-close{
+    width:50%;
     padding: 1em;
     border-top: #9a9a9a 1px solid;
     margin-top: 1em;
